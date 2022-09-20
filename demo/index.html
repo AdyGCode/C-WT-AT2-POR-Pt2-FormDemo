@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/forms-demo.css"/>
 </head>
 <body>
-<form action="send-mail.php" method="POST">
+<div class="half-width middle">
+<h1>Demo page 1</h1>
+<p>The first demo is shown by following <a href="../form-demo.html">this link to go to the page</a>.</p>
+</div>
 
-  <div>
+<form action="../send-mail.php" method="POST" class="half-width middle">
+
+  <div class="form-field">
     <label for="GivenName">Given Name:</label>
     <input type="text" id="GivenName" name="given_name">
   </div>
 
-  <div>
+  <div class="form-field">
     <label for="FamilyName">Family Name:</label>
     <input type="text" id="FamilyName" name="family_name">
   </div>
 
-  <div>
+  <div class="form-field">
     <label for="DOB">Date of Birth:</label>
     <input type="date" id="DOB" name="dob">
   </div>
 
-  <div>
+  <div class="form-field">
     <label for="Country">Country:</label>
     <select id="Country" name="country">
       <optgroup label="Frequently Selected">

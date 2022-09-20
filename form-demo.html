@@ -4,221 +4,231 @@
     <meta charset="UTF-8">
     <title>Form Demo</title>
 
-  <!--
-Filename: form-demo-1.html
-Project:  Session-10
-Author:   Adrian Gould <adrian.gould@nmtafe.wa.edu.au>
-Created:  20/09/2022
-Version:  1
--->
+    <!--
+  Filename: form-demo-1.html
+  Project:  Session-10
+  Author:   Adrian Gould <adrian.gould@nmtafe.wa.edu.au>
+  Created:  20/09/2022
+  Version:  1
+  -->
 
-  <!-- Fonts -->
+    <!-- Fonts -->
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/forms-demo.css"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/forms-demo.css"/>
 
-  <!-- JS (Deferred) -->
+    <!-- JS (Deferred) -->
 
 </head>
 <body>
+<div class="half-width middle">
+    <h1>Demo page 1</h1>
+    <p>A second demo is shown in the demo folder. This links to the send-mail.php file using a relative reference for the form
+        action. Click <a href="./demo">on this link to go to the page</a>.</p>
+    <p>Each of the form field types are shown in a box to make it easier to see them visually. These boxes are not required
+        for display purposes.</p>
+    <p>The fields are organised in a side-by-side <em>label</em>:<em>field</em> arrangement.</p>
+    <p>Other layouts are possible by altering the sample css.</p>
+</div>
+
 <form action="send-mail.php" method="POST" class="half-width middle">
 
-  <div class="form-control">
-    <div class="form-field">
-      <label for="HiddenField">Hidden Field:</label>
-      <input type="hidden" id="HiddenField" name="hidden_field" value="This is hidden"/>
-      <p>The hidden field will not have a label as it is not shown to the end user.</p>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="TextField">Text Field:</label>
-      <input type="text" id="TextField" name="text_field"
-             class="border-none border-btm-blue outline-green"
-             placeholder="Enter text in here"/>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="TextAreaField">Text Area Field:</label>
-      <textarea id="TextAreaField" name="textarea_field"
-                class="border-red outline-green rounded-small"
-                placeholder="Enter multi-line text in here"></textarea>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="DateField">Date Field:</label>
-      <input type="date" id="DateField" name="date_field"/>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="TimeField">Time Field:</label>
-      <input type="time" id="TimeField" name="time_field"/>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="DateTimeField">Date-Time Field:</label>
-      <input type="datetime-local" id="DateTimeField" name="datetime_field"/>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="FileField">File Field:</label>
-      <input type="file" id="FileField" name="file_field"/>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="ColourField">Colour Field:</label>
-      <input type="color" id="ColourField" name="colour_field"/>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="NumberField">Number Field:</label>
-      <input type="number" id="NumberField" name="number_field"
-             min="-10" max="10"/>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="RangeField">Range Field:</label>
-      <input type="range" id="RangeField" name="range_field"
-             min="-100" max="100" step="2.5" value="0"
-             onmousemove="range_output.value=parseFloat(range_field.value)"/>
-      <label for="OutputField">Output Field:</label>
-      <output name="range_output" for="RangeField" id="OutputField"></output>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="TelephoneField">Telephone Number Field:</label>
-      <input type="tel" id="TelephoneField" name="telephone_field"/>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="EMailField">eMail Field:</label>
-      <input type="email" id="EmailField" name="email_field"/>
-    </div>
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="URLField">URL Field:</label>
-      <input type="url" id="URLField" name="url_field"/>
+    <div class="form-control">
+        <div class="form-field">
+            <label for="HiddenField">Hidden Field:</label>
+            <input type="hidden" id="HiddenField" name="hidden_field" value="This is hidden"/>
+            <p>The hidden field will not have a label as it is not shown to the end user.</p>
+        </div>
     </div>
 
-  </div>
-
-  <div class="form-control">
-    <p>Two checkboxes that are grouped together</p>
-    <div class="form-field field-checkbox">
-      <label for="CheckboxField0">CheckBox Field 0:</label>
-      <input type="checkbox" id="CheckboxField0" name="checkbox_field[]"
-             value="One"
-             class="field-checkbox"/>
+    <div class="form-control">
+        <div class="form-field">
+            <label for="TextField">Text Field:</label>
+            <input type="text" id="TextField" name="text_field"
+                   class="border-none border-btm-blue outline-green"
+                   placeholder="Enter text in here"/>
+        </div>
     </div>
 
-    <div class="form-field field-checkbox">
-      <label for="CheckboxField1">CheckBox Field 1:</label>
-      <input type="checkbox" id="CheckboxField1" name="checkbox_field[]"
-             value="Two"
-             class="field-checkbox"/>
+    <div class="form-control">
+        <div class="form-field">
+            <label for="TextAreaField">Text Area Field:</label>
+            <textarea id="TextAreaField" name="textarea_field"
+                      class="border-red outline-green rounded-small"
+                      placeholder="Enter multi-line text in here"></textarea>
+        </div>
     </div>
 
-    <div class="form-field field-checkbox">
-      <label for="CheckboxField2">CheckBox Field 2:</label>
-      <input type="checkbox" id="CheckboxField2" name="checkbox_field[]"
-             class="field-checkbox"/>
+    <div class="form-control">
+        <div class="form-field">
+            <label for="DateField">Date Field:</label>
+            <input type="date" id="DateField" name="date_field"/>
+        </div>
     </div>
-  </div>
 
-  <div class="form-control">
-    <p>This checkbox is on its own, and not related to the other two.</p>
-    <div class="form-field">
-      <label for="CheckboxField9">CheckBox Field:</label>
-      <input type="checkbox" id="CheckboxField9" name="checkbox_field9"
-             class="field-checkbox"/>
+    <div class="form-control">
+        <div class="form-field">
+            <label for="TimeField">Time Field:</label>
+            <input type="time" id="TimeField" name="time_field"/>
+        </div>
     </div>
-  </div>
 
-
-  <div class="form-control">
-    <p>Radio buttons are best served in at least pairs. The name should be
-      the same for each with a different value that is sent back when
-      the form is submitted.</p>
-    <div class="form-field">
-      <label for="RadioButtonField1">Radio Button Field 1:</label>
-      <input type="radio" id="RadioButtonField1" name="radio_button_field"
-             class="field-radio"
-             value="1"/>
+    <div class="form-control">
+        <div class="form-field">
+            <label for="DateTimeField">Date-Time Field:</label>
+            <input type="datetime-local" id="DateTimeField" name="datetime_field"/>
+        </div>
     </div>
-    <div class="form-field">
-      <label for="RadioButtonField2">Radio Button Field 2:</label>
-      <input type="radio" id="RadioButtonField2" name="radio_button_field"
-             class="field-radio"
-             value="2"/>
-    </div>
-  </div>
 
-  </div>
-
-  <div class="form-control">
-    <div class="form-field">
-      <label for="SelectField">Option Select Field:</label>
-      <select id="SelectField" name="select_field">
-        <option value="default option" selected disabled>Make a choice</option>
-        <option value="option">Option</option>
-        <option value="disabled option" disabled>Disabled Option</option>
-        <optgroup label="Option Group 1">
-          <option value="value 1">Option 1</option>
-          <option value="value 2">Option 2</option>
-        </optgroup>
-        <optgroup label="Option Group 2">
-          <option value="value 4">Option 4</option>
-          <option value="value 5">Option 5</option>
-          <option value="value 6">Option 6</option>
-        </optgroup>
-      </select>
+    <div class="form-control">
+        <div class="form-field">
+            <label for="FileField">File Field:</label>
+            <input type="file" id="FileField" name="file_field"/>
+        </div>
     </div>
-  </div>
 
-  <div class="form-control">
-    <div class="form-field">
-      <label for="DataListField">Data List:</label>
-      <input list="DataListField" name="data_list"
-             placeholder="Type to see suggestions..."/>
-      <datalist id="DataListField">
-        <option value="Mango">
-        <option value="Apple">
-        <option value="Banana">
-        <option value="Pomegranate">
-        <option value="Pineapple">
-      </datalist>
+    <div class="form-control">
+        <div class="form-field">
+            <label for="ColourField">Colour Field:</label>
+            <input type="color" id="ColourField" name="colour_field"/>
+        </div>
     </div>
-  </div>
 
-  <div class="form-control">
-    <div class="form-field-buttons">
-      <button type="submit">Submit Button</button>
-      <button type="reset">Reset Button</button>
+    <div class="form-control">
+        <div class="form-field">
+            <label for="NumberField">Number Field:</label>
+            <input type="number" id="NumberField" name="number_field"
+                   min="-10" max="10"/>
+        </div>
     </div>
-  </div>
+
+    <div class="form-control">
+        <div class="form-field">
+            <label for="RangeField">Range Field:</label>
+            <input type="range" id="RangeField" name="range_field"
+                   min="-100" max="100" step="2.5" value="0"
+                   onmousemove="range_output.value=parseFloat(range_field.value)"/>
+            <label for="OutputField">Output Field:</label>
+            <output name="range_output" for="RangeField" id="OutputField"></output>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <div class="form-field">
+            <label for="TelephoneField">Telephone Number Field:</label>
+            <input type="tel" id="TelephoneField" name="telephone_field"/>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <div class="form-field">
+            <label for="EMailField">eMail Field:</label>
+            <input type="email" id="EmailField" name="email_field"/>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <div class="form-field">
+            <label for="URLField">URL Field:</label>
+            <input type="url" id="URLField" name="url_field"/>
+        </div>
+
+    </div>
+
+    <div class="form-control">
+        <p>Two checkboxes that are grouped together</p>
+        <div class="form-field field-checkbox">
+            <label for="CheckboxField0">CheckBox Field 0:</label>
+            <input type="checkbox" id="CheckboxField0" name="checkbox_field[]"
+                   value="One"
+                   class="field-checkbox"/>
+        </div>
+
+        <div class="form-field field-checkbox">
+            <label for="CheckboxField1">CheckBox Field 1:</label>
+            <input type="checkbox" id="CheckboxField1" name="checkbox_field[]"
+                   value="Two"
+                   class="field-checkbox"/>
+        </div>
+
+        <div class="form-field field-checkbox">
+            <label for="CheckboxField2">CheckBox Field 2:</label>
+            <input type="checkbox" id="CheckboxField2" name="checkbox_field[]"
+                   class="field-checkbox"/>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <p>This checkbox is on its own, and not related to the other two.</p>
+        <div class="form-field">
+            <label for="CheckboxField9">CheckBox Field:</label>
+            <input type="checkbox" id="CheckboxField9" name="checkbox_field9"
+                   class="field-checkbox"/>
+        </div>
+    </div>
+
+
+    <div class="form-control">
+        <p>Radio buttons are best served in at least pairs. The name should be
+            the same for each with a different value that is sent back when
+            the form is submitted.</p>
+        <div class="form-field">
+            <label for="RadioButtonField1">Radio Button Field 1:</label>
+            <input type="radio" id="RadioButtonField1" name="radio_button_field"
+                   class="field-radio"
+                   value="1"/>
+        </div>
+        <div class="form-field">
+            <label for="RadioButtonField2">Radio Button Field 2:</label>
+            <input type="radio" id="RadioButtonField2" name="radio_button_field"
+                   class="field-radio"
+                   value="2"/>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="form-control">
+        <div class="form-field">
+            <label for="SelectField">Option Select Field:</label>
+            <select id="SelectField" name="select_field">
+                <option value="default option" selected disabled>Make a choice</option>
+                <option value="option">Option</option>
+                <option value="disabled option" disabled>Disabled Option</option>
+                <optgroup label="Option Group 1">
+                    <option value="value 1">Option 1</option>
+                    <option value="value 2">Option 2</option>
+                </optgroup>
+                <optgroup label="Option Group 2">
+                    <option value="value 4">Option 4</option>
+                    <option value="value 5">Option 5</option>
+                    <option value="value 6">Option 6</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <div class="form-field">
+            <label for="DataListField">Data List:</label>
+            <input list="DataListField" name="data_list"
+                   placeholder="Type to see suggestions..."/>
+            <datalist id="DataListField">
+                <option value="Mango">
+                <option value="Apple">
+                <option value="Banana">
+                <option value="Pomegranate">
+                <option value="Pineapple">
+            </datalist>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <div class="form-field-buttons">
+            <button type="submit">Submit Button</button>
+            <button type="reset">Reset Button</button>
+        </div>
+    </div>
 </form>
 </body>
 </html>
