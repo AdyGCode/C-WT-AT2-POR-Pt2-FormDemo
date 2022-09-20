@@ -1,4 +1,8 @@
 <?php
+require_once './vendor/autoload.php';
+$config = HTMLPurifier_Config::createDefault();
+$config->set('Cache.DefinitionImpl', null);
+$purifier = new HTMLPurifier();
 $errors = [];
 $expected_fields = ["given_name", "family_name", "dob", "subject", "country", "message", "subject"];
 if (isset($_POST)) {
@@ -62,7 +66,7 @@ if (isset($_POST)) {
     foreach ($errors as $errorType => $errorMessage) {
         ?>
         <div class="my-2 rounded-full flex justify-start shadow">
-            <div class="w-32 rounded-full rounded-r-none pl-3 pr-2 py-1 bg-red-800 text-white/90 ">
+            <div class="w-44 rounded-full rounded-r-none pl-3 pr-2 py-1 bg-red-800 text-white/90 ">
                 <?= $errorType ?>
             </div>
             <div class="px-2 py-1 flex-1 text-red-800 bg-white ">
@@ -84,9 +88,13 @@ if (isset($_POST)) {
     if (isset($_POST)) {
         foreach ($_POST as $key => $value) {
             if ($value > "") {
+                if (is_array($value)){
+                    $value=http_build_query($value, '', ', ');
+                }
+                $value = $purifier->purify($value);
                 ?>
                 <div class="bg-stone-50 text-stone-700 my-2 rounded-full flex flex-start shadow">
-                    <div class="w-32 pl-3 pr-2 py-1 rounded-full rounded-r-none bg-stone-700 text-stone-100">
+                    <div class="w-44 pl-3 pr-2 py-1 rounded-full rounded-r-none bg-stone-700 text-stone-100">
                         <?= $key ?>
                     </div>
                     <div class="px-2 py-1 rounded-full rounded-l-none flex-1">
@@ -109,17 +117,16 @@ if (isset($_POST)) {
     <div class="pl-48 pr-8">
         <p>This form display page was developed by Adrian Gould, 2022.</p>
     </div>
-    <div class="pl-8 pr-48>
+    <div class="pl-8 pr-48">
         <ul>
-            <li></li>
             <li><a href="https://heroicons.com/">HeroIcons</a></li>
             <li><a href="https://php.net">PHP</a></li>
             <li><a href="https://tailwind.css">TailwindCSS</a></li>
+            <li><a href="http://htmlpurifier.org/">HTML Purifier</a></li>
             <li><a href="https://www.ionos.com/digitalguide/domains/domain-extensions/cctlds-a-list-of-every-country-domain/">Country Codes / Ionos.com</a></li>
         </ul>
 
     </div>
 </footer>
-
 </body>
 </html>
