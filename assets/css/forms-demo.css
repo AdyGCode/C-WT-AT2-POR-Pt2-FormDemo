@@ -1,0 +1,63 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.half-width {
+    width: 50%;
+}
+.middle {
+    margin: 0 auto;
+}
+
+.form-control {
+    border: 1px solid #999;
+    padding:1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+.form-field,
+.form-field-buttons {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    width:100%;
+    margin: 1rem 0;
+}
+
+.form-field-buttons {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    width:100%;
+}
+
+.field-checkbox,
+.field-radio {
+    justify-self: start;
+}
+
+.border-none{
+    border: none;
+}
+
+.border-red {
+    border: 1px #ff0000 solid;
+}
+
+.border-btm-blue{
+    border-bottom: 1px #000088 solid;
+}
+
+.rounded-small {
+    border-radius: 0.25rem;
+}
+.outline-green{
+    outline-color: #86ff82;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+.radio-left {
+    width: auto;
+}
