@@ -1,5 +1,13 @@
 {
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
     "tailwindcss": "^3.1.8"
+  },
+  "scripts": {
+    "build": "postcss src/mail.css -o assets/css/mail.css --watch",
+    "watch": "postcss src/mail.css -o assets/css/mail.css --watch"
   }
 }

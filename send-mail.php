@@ -88,8 +88,8 @@ if (isset($_POST)) {
     if (isset($_POST)) {
         foreach ($_POST as $key => $value) {
             if ($value > "") {
-                if (is_array($value)){
-                    $value=http_build_query($value, '', ', ');
+                if (is_array($value)) {
+                    $value = http_build_query($value, '', ', ');
                 }
                 $value = $purifier->purify($value);
                 ?>
@@ -106,12 +106,12 @@ if (isset($_POST)) {
         } /* end foreach */
     }
     ?>
-<p class="pt-8 mb-6">
-    <a class="transition hover:text-white text-blue-600 hover:bg-blue-500 bg-white shadow rounded-full px-8 py-2 border hover:border-blue-500 border-blue-800 font-medium"
-       onclick="javascript: history.back(); return false;">
-        Back
-    </a>
-</p>
+    <p class="pt-8 mb-6">
+        <a class="transition hover:text-white text-blue-600 hover:bg-green-500 duration-500 bg-white shadow rounded-full px-8 py-2 border hover:border-blue-500 border-blue-800 font-medium"
+           onclick="javascript: history.back(); return false;">
+            Back
+        </a>
+    </p>
 </main>
 <footer class="w-100 mt-8 py-8 bg-stone-300 grid grid-cols-2 flex-none">
     <div class="pl-48 pr-8">
@@ -123,7 +123,9 @@ if (isset($_POST)) {
             <li><a href="https://php.net">PHP</a></li>
             <li><a href="https://tailwind.css">TailwindCSS</a></li>
             <li><a href="http://htmlpurifier.org/">HTML Purifier</a></li>
-            <li><a href="https://www.ionos.com/digitalguide/domains/domain-extensions/cctlds-a-list-of-every-country-domain/">Country Codes / Ionos.com</a></li>
+            <li>
+                <a href="https://www.ionos.com/digitalguide/domains/domain-extensions/cctlds-a-list-of-every-country-domain/">Country
+                    Codes / Ionos.com</a></li>
         </ul>
 
     </div>
